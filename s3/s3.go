@@ -37,10 +37,9 @@ func create_s3_bucket() {
 	for _, object := range output.Contents {
 		log.Printf("key=%s, size=%d", aws.ToString(object.Key), *object.Size)
 	}
-
 }
 
 func main() {
-	// Init function
+	// Main function
 	create_s3_bucket()
 }
